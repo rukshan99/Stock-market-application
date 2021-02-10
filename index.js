@@ -37,7 +37,7 @@ function callApi(finishedAPI, searchKey) {
 // home route
 app.get('/', function (req, res) {
 	callApi(function(doneAPI){
-    	res.render('home', {
+    	res.render('index', {
     		stock: doneAPI
     	});
     },'fb');
