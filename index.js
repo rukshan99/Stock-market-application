@@ -1,3 +1,5 @@
+// Stock Market Portfolio Application By Rukshan Jayasekara
+
 const express = require('express');
 const app = express();
 const exphbs  = require('express-handlebars');
