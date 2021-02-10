@@ -1,6 +1,6 @@
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
   <h1 class="display-4">{{stock.companyName}} ({{stock.symbol}})</h1><br/>
-  <p class="lead"><strong>Latest Price: </strong>{{stock.latestPrice}} <br/>
+  	<strong>Latest Price: </strong>{{stock.latestPrice}} <br/>
 	<strong>Latest Time: </strong>{{stock.latestTime}} <br/>
 	<strong>Previous Close: </strong>{{stock.previousClose}} <br/>
 	<br/>
@@ -19,11 +19,10 @@
 	<strong>IEX Open: </strong>{{stock.iexOpen}} <br/>
 	<strong>IEX Close: </strong>{{stock.iexClose}} <br/>
 	<br/>
-	<strong>Market Cap: </strong>{{stock.marketCap}} <br/>
+	<strong>Market Cap: </strong>$ {{stock.marketCap}} <br/>
 	<br/>
 	<strong>Week 52 High: </strong>{{stock.week52High}} <br/>
 	<strong>Week 52 Low: </strong>{{stock.week52Low}} <br/>
-  </p>
   <hr class="my-4">
 </div>
 
