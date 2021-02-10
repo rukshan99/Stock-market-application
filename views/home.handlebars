@@ -1,1 +1,38 @@
-<h1>This is my handlebars home page</h1>
+<div class="jumbotron">
+  <h1 class="display-4">{{stock.companyName}} ({{stock.symbol}})</h1><br/>
+  <p class="lead"><strong>Latest Price: </strong>{{stock.latestPrice}} <br/>
+	<strong>Latest Time: </strong>{{stock.latestTime}} <br/>
+	<strong>Previous Close: </strong>{{stock.previousClose}} <br/>
+	<br/>
+	<strong>Change: </strong>{{stock.change}} <br/>
+	<strong>Change Percent: </strong>{{stock.changePercent}} <br/>
+	<br/>
+	<strong>Previous Volume: </strong>{{stock.previousVolume}} <br/>
+	<strong>Average Total Volume: </strong>{{stock.avgTotalVolume}} <br/>
+	<br/>
+	<strong>Is US Market Open: </strong>{{stock.isUSMarketOpen}} <br/>
+	<br/>
+	<strong>IEX Real Time Price: </strong>{{stock.iexRealtimePrice}} <br/>
+	<strong>IEX Real Time Size: </strong>{{stock.iexRealtimeSize}} <br/>
+	<strong>IEX Market Percent: </strong>{{stock.iexMarketPercent}} <br/>
+	<strong>IEX Volume: </strong>{{stock.iexVolume}} <br/>
+	<strong>IEX Open: </strong>{{stock.iexOpen}} <br/>
+	<strong>IEX Close: </strong>{{stock.iexClose}} <br/>
+	<br/>
+	<strong>Market Cap: </strong>{{stock.marketCap}} <br/>
+	<br/>
+	<strong>Week 52 High: </strong>{{stock.week52High}} <br/>
+	<strong>Week 52 Low: </strong>{{stock.week52Low}} <br/>
+  </p>
+  <hr class="my-4">
+</div>
+
+
+
+
+
+<!--
+{{#each stock}}
+	{{@key}} | {{this}}
+	<br/>
+{{/each}} -->

@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const exphbs  = require('express-handlebars');
 const path = require('path');
+const request = require('request');
 
 const PORT = process.env.PORT || 5000;
 
@@ -11,11 +12,31 @@ const PORT = process.env.PORT || 5000;
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+// API Key pk_5d2979a1bc6b4b7088e51a6de45011b5
+// Create callApi function
+function callApi(finishedAPI) {
+	request('https://cloud.iexapis.com/stable/stock/fb/quote?token=pk_5d2979a1bc6b4b7088e51a6de45011b5', 
+		{ json: true }, (err,res,body) =>{
+
+		if(err){
+			return console.log(err);
+		}
+		if(res.statusCode === 200){
+			finishedAPI(body);
+		}
+	});
+}
+
+
 // Setting up handlebar routes
 
 // home route
 app.get('/', function (req, res) {
-    res.render('home');
+	callApi(function(doneAPI){
+    	res.render('home', {
+    		stock: doneAPI
+    	});
+    });
 });
 // about me route
 app.get('/about', function (req, res) {
