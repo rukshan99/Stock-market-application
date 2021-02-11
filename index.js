@@ -63,5 +63,7 @@ app.post('/', function (req, res) {
 app.use(express.static(path.join(__dirname, 'public')));
 // Setting up the static images folder
 app.use(express.static('views/layouts/images'));
+// Setting up the static CSS folder
+app.use(express.static('views/layouts/css'));
 
 app.listen(PORT, () => console.log('Server listening on port ' + PORT + '...'));
