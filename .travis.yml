@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t rukshan99/stockapp .
+  - docker images rukshan99/stockapp
+
+deploy:
+  provider: script
+  script: docker push rukshan99/stockapp
+  on:
+    branch: main
